@@ -1,0 +1,17 @@
+{
+    "description": "Left / Right Shift -> en / ru",
+    "manipulators": [
+        {
+            "from": { "key_code": "f13" },
+            "to": [],
+            "to_if_alone": [{ "select_input_source": { "input_source_id": "org.sil.ukelele.keyboardlayout.jinnyswe.jinnyswe" } }],
+            "type": "basic"
+        },
+        {
+            "from": { "key_code": "f14" },
+            "to": [],
+            "to_if_alone": [{ "select_input_source": { "input_source_id": "org.sil.ukelele.keyboardlayout.unsavedukeleledocument.jinnyrus" } }],
+            "type": "basic"
+        }
+    ]
+}
