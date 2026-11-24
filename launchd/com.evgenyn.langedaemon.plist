@@ -7,7 +7,7 @@
 
     <key>ProgramArguments</key>
     <array>
-      <string>/Users/evgenyn/orodruin/zmk/langedaemon/.build/release/langedaemon</string>
+      <string>/Users/evgenyn/orodruin/langedaemon/.build/release/langedaemon</string>
       <string>--left-source</string>
       <string>org.sil.ukelele.keyboardlayout.jinnyswe.jinnyswe</string>
       <string>--right-source</string>

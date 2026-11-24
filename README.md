@@ -25,7 +25,7 @@ selects exact macOS input sources by ID.
 ## Build
 
 ```bash
-cd /Users/evgenyn/orodruin/zmk/langedaemon
+cd /Users/evgenyn/orodruin/langedaemon
 swift build -c release
 ```
 
@@ -76,7 +76,7 @@ the agent in one shot:
 
 ```bash
 mkdir -p ~/Library/LaunchAgents && \
-cp /Users/evgenyn/orodruin/zmk/langedaemon/launchd/com.evgenyn.langedaemon.plist ~/Library/LaunchAgents/ && \
+cp /Users/evgenyn/orodruin/langedaemon/launchd/com.evgenyn.langedaemon.plist ~/Library/LaunchAgents/ && \
 launchctl bootout gui/$(id -u)/com.evgenyn.langedaemon 2>/dev/null || true && \
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.evgenyn.langedaemon.plist && \
 launchctl enable gui/$(id -u)/com.evgenyn.langedaemon && \
@@ -88,7 +88,7 @@ launchctl kickstart -k gui/$(id -u)/com.evgenyn.langedaemon
 1. Install the LaunchAgent plist:
 ```bash
 mkdir -p ~/Library/LaunchAgents
-cp /Users/evgenyn/orodruin/zmk/langedaemon/launchd/com.evgenyn.langedaemon.plist \
+cp /Users/evgenyn/orodruin/langedaemon/launchd/com.evgenyn.langedaemon.plist \
   ~/Library/LaunchAgents/
 ```
 
