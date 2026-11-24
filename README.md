@@ -69,6 +69,22 @@ Without these permissions event-tap creation or event capture may fail.
 Do not run the daemon manually in a terminal for daily work. Run it as a
 `launchd` user agent.
 
+### One-command install/update
+
+Use this after any rebuild or plist change. It installs the plist and reloads
+the agent in one shot:
+
+```bash
+mkdir -p ~/Library/LaunchAgents && \
+cp /Users/evgenyn/orodruin/zmk/langedaemon/launchd/com.evgenyn.langedaemon.plist ~/Library/LaunchAgents/ && \
+launchctl bootout gui/$(id -u)/com.evgenyn.langedaemon 2>/dev/null || true && \
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.evgenyn.langedaemon.plist && \
+launchctl enable gui/$(id -u)/com.evgenyn.langedaemon && \
+launchctl kickstart -k gui/$(id -u)/com.evgenyn.langedaemon
+```
+
+### Step-by-step
+
 1. Install the LaunchAgent plist:
 ```bash
 mkdir -p ~/Library/LaunchAgents
